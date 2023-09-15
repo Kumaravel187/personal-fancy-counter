@@ -56,7 +56,13 @@ This project uses the following technologies:
 
 ## Screenshots
 
+<img src="image-1.png" alt="counter application desktop" width="200"/>
+<img src="image-2.png" alt="counter application desktop with error" width="200"/>
+<img src="image-3.png" alt="counter application mobile" width="200"/>
+
 ## Links
+
+solution url: https://coruscating-lamington-c231f4.netlify.app/
 
 ## Contributing
 
