@@ -1,13 +1,17 @@
+// Keyframes animation for sliding in from the left
 @keyframes slideInLeft {
+  // Starting state
   from {
     opacity: 0;
     transform: translateX(3rem);
   }
 
+  // Intermediate state at 80% of the animation duration
   80% {
     transform: translateX(-3rem);
   }
 
+  // Ending state
   to {
     transform: translateX(0rem);
     opacity: 1;

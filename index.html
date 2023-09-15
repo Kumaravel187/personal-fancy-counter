@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Link to the Work Sans font family from Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Link to Font Awesome icon library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -17,20 +24,31 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Link to custom stylesheet -->
     <link rel="stylesheet" href="/styles/styles.css" />
+
+    <!-- Defer loading of JavaScript file -->
     <script src="/app/app.js" defer></script>
+
+    <!-- Page title -->
     <title>Fancy Counter</title>
   </head>
   <body>
+    <!-- Counter section -->
     <section class="counter">
+      <!-- Counter title -->
       <h1 class="counter__title">Fancy <span>Counter</span></h1>
 
+      <!-- Counter value display -->
       <span class="counter__value">0</span>
 
+      <!-- Button to reset the counter -->
       <button class="counter__reset-button">
         <i class="fas fa-sync-alt counter__reset-icon"></i>
       </button>
 
+      <!-- Buttons for increasing and decreasing the counter -->
       <div class="counter__buttons">
         <button class="counter__button counter__button--decrease">
           <i class="fas fa-minus counter__icon counter__icon--minus"></i>

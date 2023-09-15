@@ -1,12 +1,17 @@
+// Mixin for styling buttons
 @mixin button-style($col) {
+  // Text color, font size, font weight, transition, and cursor
   color: $col;
   font-size: 3rem;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
+  // Hover state
   &:hover {
+    // Background color lightened slightly
     background-color: lighten($color: gray, $amount: 5%);
+    // Text color lightened significantly
     color: lighten($color: $col, $amount: 25%);
   }
 }

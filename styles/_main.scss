@@ -1,55 +1,77 @@
+// Styling for the .counter class
 .counter {
+  // Background color, dimensions, and border radius
   background-color: $pink;
   width: 29.75rem;
   height: 38.5rem;
   border-radius: 0.75rem;
   text-align: center;
+
+  // Box shadow for a subtle 3D effect
   box-shadow: 0px 3rem 6.35rem 0.625rem rgba(0, 0, 0, 0.5);
+
+  // Extending a flex center mixin
   @extend %flex-center;
   flex-direction: column;
   overflow: hidden;
   transition: all 0.4s;
 
+  // Styling for the title within the .counter
   &__title {
     margin-top: 4rem;
     font-size: 2.5rem;
+    // Extending an app-description mixin
     @extend %app-description;
     animation-name: slideInLeft;
     animation-duration: 1.5s;
+
+    // Styling for the span within the title
     span {
       display: block;
     }
   }
 
+  // Styling for the counter value
   &__value {
     margin-top: 1rem;
+    // Extending an app-description mixin
     @extend %app-description;
     font-size: 11rem;
   }
 
+  // Styling for the reset button within the .counter
   &__reset-button {
+    // Extending an app-description mixin
     @extend %app-description;
     font-size: 1.75rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
+    // Hover effect
     &:hover {
       opacity: 0.6;
     }
   }
 
+  // Styling for the buttons section within the .counter
   &__buttons {
     height: 8rem;
     background-color: black;
     width: 100%;
     margin-top: auto;
     display: flex;
+
+    // Styling for the decrease button
     .counter__button--decrease {
       flex: 1;
+      // Including a button-style mixin with a variable
       @include button-style($red);
       border-right: 0.03125rem solid gray;
     }
 
+    // Styling for the increase button
     .counter__button--increase {
+      // Including a button-style mixin with a variable
       @include button-style($green);
       border-left: 0.03125rem solid gray;
       flex: 1;
@@ -57,6 +79,8 @@
   }
 }
 
+// Styling for the .error class
 .error {
+  // Background color defined by a variable
   background-color: $error;
 }
