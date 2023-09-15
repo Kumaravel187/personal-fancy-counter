@@ -20,12 +20,26 @@ body {
   padding: 0; /* Vertical and horizontal padding for the content area */
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
-  background-color: $turquoise;
+  background-image: radial-gradient(ellipse, $light-beige, $dark-beige);
+  @extend %flex-center;
 }
 
-/* Desktop view */
-// @media (min-width: 56.25rem) {
-//   body {
+button {
+  all: unset;
+}
 
-//   }
-// }
+/* Mobile view */
+@media (max-width: 50rem) {
+  html {
+    font-size: 80%;
+  }
+
+  body {
+    .counter {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      padding-top: 12rem;
+    }
+  }
+}

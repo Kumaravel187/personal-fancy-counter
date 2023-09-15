@@ -1,3 +1,27 @@
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  80% {
+    transform: translateX(-3rem);
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+.counter, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter__reset-button, .counter__value, .counter__title {
+  color: whitesmoke;
+  font-weight: 700;
+}
+
 /* Set the base styling for the entire HTML document */
 html {
   box-sizing: border-box;
@@ -20,7 +44,91 @@ body {
   padding: 0; /* Vertical and horizontal padding for the content area */
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
-  background-color: hsla(177, 79%, 54%, 0.6);
+  background-image: radial-gradient(ellipse, hsl(32, 52%, 89%), hsl(32, 74%, 81%));
 }
 
-/* Desktop view *//*# sourceMappingURL=styles.css.map */
+button {
+  all: unset;
+}
+
+/* Mobile view */
+@media (max-width: 50rem) {
+  html {
+    font-size: 80%;
+  }
+  body .counter {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding-top: 12rem;
+  }
+}
+.counter {
+  background-color: hsl(349, 49%, 70%);
+  width: 29.75rem;
+  height: 38.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0px 3rem 6.35rem 0.625rem rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.counter__title {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  animation-name: slideInLeft;
+  animation-duration: 1.5s;
+}
+.counter__title span {
+  display: block;
+}
+.counter__value {
+  margin-top: 1rem;
+  font-size: 11rem;
+}
+.counter__reset-button {
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.counter__reset-button:hover {
+  opacity: 0.6;
+}
+.counter__buttons {
+  height: 8rem;
+  background-color: black;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+}
+.counter__buttons .counter__button--decrease {
+  flex: 1;
+  color: hsl(343, 79%, 44%);
+  font-size: 3rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-right: 0.03125rem solid gray;
+}
+.counter__buttons .counter__button--decrease:hover {
+  background-color: #8d8d8d;
+  color: #ee7295;
+}
+.counter__buttons .counter__button--increase {
+  color: hsl(101, 55%, 42%);
+  font-size: 3rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-left: 0.03125rem solid gray;
+  flex: 1;
+}
+.counter__buttons .counter__button--increase:hover {
+  background-color: #8d8d8d;
+  color: #9ad97d;
+}
+
+.error {
+  background-color: hsl(0, 100%, 41%);
+}/*# sourceMappingURL=styles.css.map */

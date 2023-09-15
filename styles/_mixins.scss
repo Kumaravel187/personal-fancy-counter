@@ -1,0 +1,12 @@
+@mixin button-style($col) {
+  color: $col;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color: gray, $amount: 5%);
+    color: lighten($color: $col, $amount: 25%);
+  }
+}

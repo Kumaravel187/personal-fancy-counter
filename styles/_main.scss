@@ -1,0 +1,62 @@
+.counter {
+  background-color: $pink;
+  width: 29.75rem;
+  height: 38.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0px 3rem 6.35rem 0.625rem rgba(0, 0, 0, 0.5);
+  @extend %flex-center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  &__title {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    @extend %app-description;
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    span {
+      display: block;
+    }
+  }
+
+  &__value {
+    margin-top: 1rem;
+    @extend %app-description;
+    font-size: 11rem;
+  }
+
+  &__reset-button {
+    @extend %app-description;
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__buttons {
+    height: 8rem;
+    background-color: black;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    .counter__button--decrease {
+      flex: 1;
+      @include button-style($red);
+      border-right: 0.03125rem solid gray;
+    }
+
+    .counter__button--increase {
+      @include button-style($green);
+      border-left: 0.03125rem solid gray;
+      flex: 1;
+    }
+  }
+}
+
+.error {
+  background-color: $error;
+}
